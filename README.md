@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Team Task Manager - Full Stack Web App
 
-## Getting Started
+Team Task Manager is a full-stack web application where users can create projects, assign tasks, and track progress with role-based access control.
 
-First, run the development server:
+## Features
+
+- User signup and login
+- Admin and Member roles
+- Project creation and listing
+- Task creation and assignment
+- Task status tracking
+- Dashboard with project and task statistics
+- REST APIs
+- SQL database integration using Prisma
+- Modern responsive UI design
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Prisma
+- SQLite for local development
+- PostgreSQL for production deployment
+- Railway for deployment
+
+## User Roles
+
+Admin:
+- Create projects
+- Create tasks
+- Assign tasks to users
+- Update task status
+- View dashboard statistics
+
+Member:
+- View assigned tasks
+- Update assigned task status
+- View dashboard statistics
+
+## Main Pages
+
+- `/signup`
+- `/login`
+- `/dashboard`
+- `/projects`
+- `/tasks`
+
+## API Routes
+
+- `POST /api/auth/signup`
+- `POST /api/auth/login`
+- `GET /api/projects`
+- `POST /api/projects`
+- `GET /api/tasks`
+- `POST /api/tasks`
+- `PATCH /api/tasks`
+- `GET /api/dashboard`
+- `GET /api/users`
+
+## Database Relationships
+
+- A user can own many projects
+- A project belongs to one user
+- A project can have many tasks
+- A task belongs to one project
+- A task can be assigned to one user
+
+## Local Setup
 
 ```bash
+npm install
+npx prisma migrate dev
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+```env
+DATABASE_URL=
+JWT_SECRET=
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Demo Login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Admin:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+Email: admin@test.com
+Password: 123456
+```
 
-## Deploy on Vercel
+Member:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+Email: member@test.com
+Password: 123456
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project is prepared for deployment on Railway with PostgreSQL as the production database.
+
+## Developer Note
+
+This project was developed with my own effort along with guided support from an AI coding assistant. The AI tool was used as a learning and productivity support system to understand the full-stack structure, debug errors, improve the UI design, and organize deployment steps.
+
+I actively worked on the project by testing features, fixing issues, customizing the design, understanding the code flow, and preparing the final submission. The use of AI support was done in a fair and responsible way, similar to how modern developers use documentation, tutorials, and development tools to improve their workflow.
+
+As AI is becoming an important part of the future of software development, this project also reflects how AI can support learning and development while still requiring human understanding, decision-making, and ownership.

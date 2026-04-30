@@ -103,10 +103,12 @@ Password: 123456
 Deployment:
 The application is prepared for deployment on Railway. For production deployment, PostgreSQL is used as the database and Railway provides the live application URL.
 
-AI Assistance Note:
-This project was built with personal effort and guided support from an AI coding tool. The AI tool was used as a learning and development assistant for understanding full-stack structure, debugging errors, improving UI design, and organizing deployment steps. The implementation decisions, testing, customization, and final project preparation were completed through active human involvement.
+Developer Note:
+This project was developed with my own effort along with guided support from an AI coding assistant. The AI tool was used as a learning and productivity support system to understand the full-stack structure, debug errors, improve the UI design, and organize deployment steps.
 
-Using AI support in this project was done in a fair and responsible way. It helped speed up learning, reduce confusion, and improve the quality of the final application. As AI is becoming an important part of the future of software development, this project also reflects how developers can use AI tools productively while still understanding and owning the work they submit.
+I actively worked on the project by testing features, fixing issues, customizing the design, understanding the code flow, and preparing the final submission. The use of AI support was done in a fair and responsible way, similar to how modern developers use documentation, tutorials, and development tools to improve their workflow.
+
+As AI is becoming an important part of the future of software development, this project also reflects how AI can support learning and development while still requiring human understanding, decision-making, and ownership.
 
 Conclusion:
 Team Task Manager demonstrates a working full-stack application with authentication, database relationships, REST APIs, role-based access control, project management, task assignment, dashboard tracking, and deployment readiness.
