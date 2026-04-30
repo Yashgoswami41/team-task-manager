@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { formatIndianDate } from "@/lib/formatDate";
 
 type Project = {
   id: string;
   name: string;
   description: string | null;
+  createdAt: string;
   tasks: { id: string }[];
   owner: {
     name: string;
@@ -95,6 +97,7 @@ export default function ProjectsPage() {
               <div className="mt-4 flex flex-wrap gap-2 text-sm">
                 <span className="rounded-md bg-violet-100 px-3 py-1 text-violet-800">Owner: {project.owner.name}</span>
                 <span className="rounded-md bg-emerald-100 px-3 py-1 text-emerald-800">Tasks: {project.tasks.length}</span>
+                <span className="rounded-md bg-slate-100 px-3 py-1 text-slate-700">Created: {formatIndianDate(project.createdAt)}</span>
               </div>
             </div>
           ))}

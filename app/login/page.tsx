@@ -42,33 +42,33 @@ export default function LoginPage() {
         <div className="pointer-events-none absolute left-6 top-6 h-24 w-24 rounded-br-[36px] border-l border-t border-violet-200/30" />
         <div className="pointer-events-none absolute bottom-6 right-6 h-24 w-24 rounded-tl-[36px] border-b border-r border-fuchsia-200/30" />
         <div className="grid w-full max-w-5xl overflow-hidden rounded-lg border border-white/10 bg-white/10 shadow-2xl shadow-violet-950/40 backdrop-blur md:grid-cols-2">
-          <section className="flex flex-col justify-center p-10">
+          <section className="flex flex-col justify-center p-10 md:p-12">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-violet-200">
               Team Task Manager
             </p>
             <h1 className="mb-4 text-4xl font-bold leading-tight text-white">
-              Move every task with focus.
+              Back to the flow.
           </h1>
 
-          <p className="mb-8 text-lg text-violet-100">
-            Sign in to organize work, assign ownership, and turn team progress into something you can actually see.
+          <p className="mb-10 max-w-md text-lg text-violet-100">
+            Jump in, check tasks, move work forward.
           </p>
 
-          <AuthVisual quote="Clear ownership makes fast teams feel calm, focused, and ready for the next move." />
+          <AuthVisual quote="Less confusion. More done. That is the vibe." />
         </section>
 
-        <section className="bg-white p-8 text-slate-900">
+        <section className="bg-white p-8 text-slate-900 md:p-10">
           <form onSubmit={handleSubmit}>
             <h2 className="mb-2 text-3xl font-bold">Welcome back</h2>
-            <p className="mb-6 text-slate-500">
-              Login to continue managing your team workspace.
+            <p className="mb-8 text-slate-500">
+              Your workspace missed you.
             </p>
 
             <label className="mb-1 block text-sm font-medium">
               Email
             </label>
             <input
-              className="mb-4 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-5 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
               placeholder="Enter your email"
               value={form.email}
               onChange={(e) =>
@@ -94,16 +94,16 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="mt-6 border-t pt-5 text-center">
-            <p className="mb-3 text-slate-600">
-              New here? Build your workspace and bring every project into rhythm.
+          <div className="mt-8 border-t pt-6 text-center">
+            <p className="mb-4 text-slate-600">
+              New here? Start your team space.
             </p>
 
             <a
               href="/signup"
               className="inline-block w-full rounded-md border border-violet-700 p-3 font-semibold text-violet-700 transition hover:bg-violet-50"
             >
-              Create New Account
+              Sign Up
             </a>
           </div>
         </section>

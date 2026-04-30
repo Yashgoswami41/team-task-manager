@@ -8,23 +8,23 @@ export function AuthVisual({ quote }: AuthVisualProps) {
       <div className="absolute right-4 top-4 h-20 w-20 rounded-full bg-fuchsia-500/20 blur-2xl" />
       <div className="absolute bottom-4 left-4 h-24 w-24 rounded-full bg-violet-400/20 blur-2xl" />
 
-      <div className="relative mb-5 flex items-center justify-between">
+      <div className="relative mb-6 flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-violet-200">
-            Live workspace
+            Team flow
           </p>
-          <h3 className="mt-1 text-xl font-semibold text-white">Sprint Board</h3>
+          <h3 className="mt-1 text-xl font-semibold text-white">Today Board</h3>
         </div>
         <span className="rounded-md bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-200">
-          Active
+          Live
         </span>
       </div>
 
-      <div className="relative grid gap-3 sm:grid-cols-3">
+      <div className="relative grid gap-4 sm:grid-cols-3">
         {[
-          ["Todo", "Wireframes", "2 tasks", "bg-amber-300"],
-          ["Progress", "API build", "4 tasks", "bg-violet-300"],
-          ["Done", "Auth flow", "6 tasks", "bg-emerald-300"],
+          ["Plan", "Design UI", "2 tasks", "bg-amber-300"],
+          ["Build", "APIs", "4 tasks", "bg-violet-300"],
+          ["Ship", "Demo", "6 tasks", "bg-emerald-300"],
         ].map((column, index) => (
           <div
             key={column[0]}
@@ -47,7 +47,7 @@ export function AuthVisual({ quote }: AuthVisualProps) {
         ))}
       </div>
 
-      <p className="relative mt-5 rounded-md border border-violet-200/20 bg-violet-500/10 p-4 text-sm leading-6 text-violet-50">
+      <p className="relative mt-6 rounded-md border border-violet-200/20 bg-violet-500/10 p-4 text-sm leading-6 text-violet-50">
         {quote}
       </p>
     </div>

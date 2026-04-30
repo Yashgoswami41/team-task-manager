@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Footer } from "@/components/Footer";
 
 type AppShellProps = {
   title: string;
@@ -36,8 +37,11 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
         <div className="mx-auto max-w-6xl px-5 py-6">
           <nav className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/10 px-5 py-4 shadow-2xl shadow-violet-950/30 backdrop-blur">
             <a href="/dashboard" className="group flex items-center gap-3 text-lg font-bold tracking-wide text-white">
-              <span className="grid h-9 w-9 place-items-center rounded-md bg-violet-500 shadow-lg shadow-violet-800/40 transition group-hover:rotate-6 group-hover:bg-fuchsia-500">
-                TT
+              <span className="relative grid h-9 w-9 place-items-center rounded-md bg-violet-500 shadow-lg shadow-violet-800/40 transition group-hover:rotate-6 group-hover:bg-fuchsia-500">
+                <span className="absolute top-2 h-2.5 w-2.5 rounded-full bg-white" />
+                <span className="absolute bottom-2 h-3.5 w-5 rounded-t-full bg-white" />
+                <span className="absolute right-1.5 top-3 h-2 w-2 rounded-full bg-violet-100/80" />
+                <span className="absolute bottom-2 right-1 h-2.5 w-3 rounded-t-full bg-violet-100/80" />
               </span>
               <span>Team Task Manager</span>
             </a>
@@ -80,6 +84,8 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
           </header>
 
           {children}
+
+          <Footer />
         </div>
       </div>
     </main>

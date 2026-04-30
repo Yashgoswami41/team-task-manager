@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { formatIndianDate } from "@/lib/formatDate";
 
 type Project = {
   id: string;
@@ -21,6 +22,7 @@ type Task = {
   description: string | null;
   status: string;
   dueDate: string | null;
+  createdAt: string;
   project: Project;
   assignee: User | null;
 };
@@ -216,7 +218,8 @@ export default function TasksPage() {
               <div className="mt-4 space-y-1 text-sm text-slate-600">
                 <p>Project: {task.project.name}</p>
                 <p>Assigned To: {task.assignee ? task.assignee.name : "Unassigned"}</p>
-                <p>Due Date: {task.dueDate ? task.dueDate.slice(0, 10) : "No due date"}</p>
+                <p>Created: {formatIndianDate(task.createdAt)}</p>
+                <p>Due Date: {task.dueDate ? formatIndianDate(task.dueDate) : "No due date"}</p>
               </div>
 
               <div className="mt-3">
