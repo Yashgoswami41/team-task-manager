@@ -97,7 +97,7 @@ export default function ProjectsPage() {
               <p className="mt-2 text-slate-600">{project.description}</p>
               <div className="mt-4 flex flex-wrap gap-2 text-sm">
                 <span className="text-violet-800">
-  Owner: {project.owner.name} - {project.role}
+  Owner: {project.owner.name}
 </span>
                 <span className="rounded-md bg-emerald-100 px-3 py-1 text-emerald-800">Tasks: {project.tasks.length}</span>
                 <span className="rounded-md bg-slate-100 px-3 py-1 text-slate-700">Created: {formatIndianDate(project.createdAt)}</span>
