@@ -1,10 +1,10 @@
 Team Task Manager - Full Stack Web App
 
 Live Application URL:
-Add Railway live URL here after deployment
+https://team-task-manager-production-fd20.up.railway.app/
 
 GitHub Repository:
-Add GitHub repository link here after upload
+https://github.com/Yashgoswami41/team-task-manager
 
 Description:
 Team Task Manager is a full-stack web application where users can create projects, assign tasks, and track progress with role-based access control. The application supports Admin and Member roles, task assignment, task status updates, dashboard statistics, REST APIs, and database relationships.
