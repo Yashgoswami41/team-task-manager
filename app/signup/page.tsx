@@ -41,8 +41,6 @@ export default function SignupPage() {
   return (
     <main className="min-h-screen bg-[#10091f] p-6 text-slate-100">
       <div className="relative flex min-h-[calc(100vh-48px)] items-center justify-center overflow-hidden rounded-lg bg-[radial-gradient(circle_at_top_right,#7c3aed_0,#281449_34%,#10091f_72%)]">
-        <div className="pointer-events-none absolute right-6 top-6 h-24 w-24 rounded-bl-[36px] border-r border-t border-violet-200/30" />
-        <div className="pointer-events-none absolute bottom-6 left-6 h-24 w-24 rounded-tr-[36px] border-b border-l border-fuchsia-200/30" />
         <div className="grid w-full max-w-5xl overflow-hidden rounded-lg border border-white/10 bg-white/10 shadow-2xl shadow-violet-950/40 backdrop-blur md:grid-cols-2">
           <section className="flex flex-col justify-center p-10 md:p-12">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-violet-200">

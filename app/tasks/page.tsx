@@ -191,8 +191,8 @@ export default function TasksPage() {
             </select>
             
             <label className="mb-1 block text-sm font-medium text-slate-600">
-  Deadline
-</label>
+              Deadline
+            </label>
 
             <input
               className="mb-4 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"

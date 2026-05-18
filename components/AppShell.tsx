@@ -29,8 +29,6 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
   return (
     <main className="min-h-screen bg-[#10091f] text-slate-100">
       <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,#5b21b6_0,#24103f_28%,#10091f_62%)]">
-        <div className="pointer-events-none absolute left-8 top-8 h-28 w-28 rounded-br-[42px] border-l border-t border-violet-300/30" />
-        <div className="pointer-events-none absolute bottom-8 right-8 h-28 w-28 rounded-tl-[42px] border-b border-r border-fuchsia-300/30" />
         <div className="pointer-events-none absolute left-1/2 top-16 h-64 w-64 -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-3xl" />
         <div className="pointer-events-none absolute bottom-20 left-14 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
 
