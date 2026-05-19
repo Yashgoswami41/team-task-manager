@@ -84,11 +84,6 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <div className="float-card absolute -left-8 top-10 hidden rounded-lg border border-white/10 bg-white/10 p-4 text-sm text-violet-50 shadow-2xl backdrop-blur md:block">
-              <p className="font-semibold">Welcome back, Yash</p>
-              <p className="mt-1 text-violet-200">3 tasks need attention</p>
-            </div>
-
             <div className="rounded-lg border border-white/10 bg-slate-950/60 p-5 shadow-2xl shadow-violet-950/50 backdrop-blur">
               <div className="mb-5 flex items-center justify-between">
                 <div>
