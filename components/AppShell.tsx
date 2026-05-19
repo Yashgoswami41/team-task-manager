@@ -33,7 +33,7 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
         <div className="hero-orb hero-orb-one" />
         <div className="hero-orb hero-orb-two" />
 
-        <div className="mx-auto max-w-6xl px-5 py-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-6">
           <nav className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/10 px-5 py-4 shadow-2xl shadow-violet-950/30 backdrop-blur">
             <a href="/dashboard" className="group flex items-center gap-3 text-lg font-bold tracking-wide text-white">
               <span className="relative grid h-9 w-9 place-items-center rounded-md bg-violet-500 shadow-lg shadow-violet-800/40 transition group-hover:rotate-6 group-hover:bg-fuchsia-500">

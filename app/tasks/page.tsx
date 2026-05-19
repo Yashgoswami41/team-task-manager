@@ -139,11 +139,11 @@ export default function TasksPage() {
       subtitle={isAdmin ? "Create, assign, and monitor work across the team." : "Review your assigned work and keep progress updated."}
     >
         {isAdmin && (
-          <form onSubmit={createTask} className="mb-6 rounded-lg border border-white/10 bg-white/95 p-5 text-slate-900 shadow-xl shadow-violet-950/20">
+          <form onSubmit={createTask} className="mb-6 rounded-lg border border-white/10 bg-white/10 p-5 text-white shadow-xl shadow-violet-950/20 backdrop-blur">
             <h2 className="mb-4 text-xl font-semibold">Create Task</h2>
 
             <input
-              className="mb-3 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-3 w-full rounded-md border border-white/10 bg-slate-950/40 p-3 text-white outline-none transition placeholder:text-violet-200/70 focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
               placeholder="Task title"
               value={form.title}
               onChange={(e) =>
@@ -152,7 +152,7 @@ export default function TasksPage() {
             />
 
             <textarea
-              className="mb-3 min-h-24 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-3 min-h-24 w-full rounded-md border border-white/10 bg-slate-950/40 p-3 text-white outline-none transition placeholder:text-violet-200/70 focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
               placeholder="Task description"
               value={form.description}
               onChange={(e) =>
@@ -161,7 +161,7 @@ export default function TasksPage() {
             />
 
             <select
-              className="mb-3 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-3 w-full rounded-md border border-white/10 bg-slate-950/40 p-3 text-white outline-none transition focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
               value={form.projectId}
               onChange={(e) =>
                 setForm({ ...form, projectId: e.target.value })
@@ -176,7 +176,7 @@ export default function TasksPage() {
             </select>
 
             <select
-              className="mb-3 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-3 w-full rounded-md border border-white/10 bg-slate-950/40 p-3 text-white outline-none transition focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
               value={form.assigneeId}
               onChange={(e) =>
                 setForm({ ...form, assigneeId: e.target.value })
@@ -190,12 +190,12 @@ export default function TasksPage() {
               ))}
             </select>
             
-            <label className="mb-1 block text-sm font-medium text-slate-600">
+            <label className="mb-1 block text-sm font-medium text-violet-100">
               Deadline
             </label>
 
             <input
-              className="mb-4 w-full rounded-md border border-slate-300 p-3 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+              className="mb-4 w-full rounded-md border border-white/10 bg-slate-950/40 p-3 text-white outline-none transition focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
               type="date"
               value={form.dueDate}
               onChange={(e) =>
@@ -203,7 +203,7 @@ export default function TasksPage() {
               }
             />
 
-            <button className="rounded-md bg-violet-700 px-5 py-3 font-semibold text-white shadow-lg shadow-violet-200 transition hover:-translate-y-0.5 hover:bg-violet-800">
+            <button className="rounded-md bg-violet-600 px-5 py-3 font-semibold text-white shadow-lg shadow-violet-950/30 transition hover:-translate-y-0.5 hover:bg-fuchsia-600">
               Create Task
             </button>
           </form>
@@ -211,15 +211,15 @@ export default function TasksPage() {
 
         <div className="grid gap-4 md:grid-cols-2">
           {tasks.map((task) => (
-            <div key={task.id} className="rounded-lg border border-white/10 bg-white/95 p-5 text-slate-900 shadow-xl shadow-violet-950/20 transition hover:-translate-y-1">
+            <div key={task.id} className="rounded-lg border border-white/10 bg-white/10 p-5 text-white shadow-xl shadow-violet-950/20 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
               <div className="mb-3 flex items-start justify-between gap-3">
-                <h2 className="text-xl font-semibold text-violet-900">{task.title}</h2>
-                <span className="rounded-md bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-800">
+                <h2 className="text-xl font-semibold text-white">{task.title}</h2>
+                <span className="rounded-md bg-violet-500/20 px-3 py-1 text-xs font-semibold text-violet-100">
                   {task.status}
                 </span>
               </div>
-              <p className="text-slate-600">{task.description}</p>
-              <div className="mt-4 space-y-1 text-sm text-slate-600">
+              <p className="text-violet-100">{task.description}</p>
+              <div className="mt-4 space-y-1 text-sm text-slate-200">
                 <p>Project: {task.project.name}</p>
                 <p>Assigned To: {task.assignee ? task.assignee.name : "Unassigned"}</p>
                 <p>Created: {formatIndianDate(task.createdAt)}</p>
@@ -229,7 +229,7 @@ export default function TasksPage() {
               <div className="mt-3">
                 <label className="mb-1 block text-sm font-medium">Status</label>
                 <select
-                  className="rounded-md border border-slate-300 p-2 outline-none transition focus:border-violet-600 focus:ring-4 focus:ring-violet-100"
+                  className="rounded-md border border-white/10 bg-slate-950/40 p-2 text-white outline-none transition focus:border-violet-300 focus:ring-4 focus:ring-violet-500/20"
                   value={task.status}
                   onChange={(e) =>
                     updateStatus(task.id, e.target.value)
