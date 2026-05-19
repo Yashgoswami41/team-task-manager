@@ -30,7 +30,7 @@ export default function Home() {
         });
       }}
       style={{
-        background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, rgba(168,85,247,0.28), transparent 26%), #0c0618`,
+        background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, rgba(168,85,247,0.16), transparent 12%), #0c0618`,
       }}
     >
       <section className="relative flex min-h-screen items-center px-5 py-16">
@@ -40,7 +40,10 @@ export default function Home() {
 
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
           <div>
-            <div className="mb-6 inline-flex rounded-full border border-violet-300/20 bg-white/10 px-4 py-2 text-sm font-semibold text-violet-100 backdrop-blur">
+            <div className="brand-pill mb-6 inline-flex items-center gap-2 rounded-full border border-violet-300/20 bg-white/10 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-violet-50 backdrop-blur">
+              <span className="rounded-full bg-violet-500 px-2 py-1 text-xs text-white shadow-lg shadow-violet-900/40">
+                TTM
+              </span>
               Team Task Manager
             </div>
 
@@ -136,11 +139,6 @@ export default function Home() {
                 <p className="mb-2 text-sm font-semibold text-violet-200">Realtime Activity</p>
                 <p className="activity-pop text-white">{activity[activeActivity]}</p>
               </div>
-            </div>
-
-            <div className="float-card-two absolute -bottom-8 right-6 rounded-lg border border-white/10 bg-white/10 p-4 text-sm text-violet-50 shadow-2xl backdrop-blur">
-              <p className="font-semibold">Next deadline</p>
-              <p className="mt-1 text-violet-200">Tomorrow, 06:00 PM</p>
             </div>
           </div>
         </div>

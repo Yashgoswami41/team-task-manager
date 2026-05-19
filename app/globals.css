@@ -125,16 +125,16 @@ body {
 .hero-orb {
   pointer-events: none;
   position: absolute;
-  border-radius: 9999px;
-  filter: blur(64px);
-  opacity: 0.32;
+  border-radius: 38% 62% 55% 45%;
+  filter: blur(34px);
+  opacity: 0.24;
 }
 
 .hero-orb-one {
   top: 12%;
   right: 8%;
-  width: 280px;
-  height: 280px;
+  width: 150px;
+  height: 150px;
   background: #a855f7;
   animation: softPulse 6s ease-in-out infinite;
 }
@@ -142,10 +142,14 @@ body {
 .hero-orb-two {
   bottom: 8%;
   left: 10%;
-  width: 340px;
-  height: 340px;
+  width: 190px;
+  height: 190px;
   background: #db2777;
   animation: softPulse 7s ease-in-out infinite reverse;
+}
+
+.brand-pill {
+  text-shadow: 0 0 22px rgba(216, 180, 254, 0.45);
 }
 
 .float-card {
