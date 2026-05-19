@@ -28,9 +28,10 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
 
   return (
     <main className="min-h-screen bg-[#10091f] text-slate-100">
-      <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,#5b21b6_0,#24103f_28%,#10091f_62%)]">
-        <div className="pointer-events-none absolute left-1/2 top-16 h-64 w-64 -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-20 left-14 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
+      <div className="relative min-h-screen overflow-hidden bg-[#0c0618]">
+        <div className="hero-grid pointer-events-none absolute inset-0 opacity-25" />
+        <div className="hero-orb hero-orb-one" />
+        <div className="hero-orb hero-orb-two" />
 
         <div className="mx-auto max-w-6xl px-5 py-6">
           <nav className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/10 px-5 py-4 shadow-2xl shadow-violet-950/30 backdrop-blur">
