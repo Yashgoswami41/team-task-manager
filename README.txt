@@ -1,7 +1,7 @@
 Team Task Manager - Full Stack Web App
 
 Live Application URL:
-https://team-task-manager-production-fd20.up.railway.app/
+https://team-task-manager-dusky-seven.vercel.app/
 
 GitHub Repository:
 https://github.com/Yashgoswami41/team-task-manager
@@ -101,7 +101,7 @@ Email: member@test.com
 Password: 123456
 
 Deployment:
-The application is prepared for deployment on Railway. For production deployment, PostgreSQL is used as the database and Railway provides the live application URL.
+The application is prepared for deployment on Vercel. For production deployment, PostgreSQL is used as the database and Vercel provides the live application URL.
 
 Developer Note:
 This project was developed with my own effort along with guided support from an AI coding assistant. The AI tool was used as a learning and productivity support system to understand the full-stack structure, debug errors, improve the UI design, and organize deployment steps.
