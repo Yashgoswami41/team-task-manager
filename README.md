@@ -21,8 +21,8 @@ Team Task Manager is a full-stack web application where users can create project
 - Tailwind CSS
 - Prisma
 - SQLite for local development
-- PostgreSQL for production deployment
-- Railway for deployment
+- Neon PostgreSQL for production database
+- Vercel for deployment
 
 ## User Roles
 
@@ -105,7 +105,15 @@ Password: 123456
 
 ## Deployment
 
-This project is prepared for deployment on Railway with PostgreSQL as the production database.
+This project is deployed on Vercel with Neon PostgreSQL as the production database.
+
+The database was initially tested with Render PostgreSQL, but it was later migrated to Neon PostgreSQL for a more stable resume/project deployment setup. Neon is used as the hosted PostgreSQL provider, while Prisma handles schema migrations and database access.
+
+Production database setup:
+
+- `DATABASE_URL` points to the Neon PostgreSQL connection string
+- Prisma migrations create the required User, Project, and Task tables
+- Vercel environment variables are used to keep database credentials and JWT secrets secure
 
 ## Developer Note
 
