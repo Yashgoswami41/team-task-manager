@@ -84,17 +84,8 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
                   </span>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setIsProfileOpen((current) => !current)}
-                  className="rounded-md border border-violet-300/30 px-3 py-2 text-sm font-semibold text-violet-100 transition hover:bg-white/10 hover:text-white"
-                  aria-label="Toggle profile options"
-                >
-                  Profile
-                </button>
-
                 {isProfileOpen && (
-                  <div className="absolute right-0 top-full z-30 mt-3 w-72 rounded-lg border border-white/10 bg-[#171027]/95 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur">
+                  <div className="fixed right-8 top-28 z-[9999] w-72 rounded-lg border border-white/10 bg-[#171027]/95 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur">
                     <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-4">
                       <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-base font-black text-white">
                         {profileInitial}
