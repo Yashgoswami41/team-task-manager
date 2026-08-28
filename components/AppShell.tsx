@@ -41,7 +41,7 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
         <div className="hero-orb hero-orb-two" />
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-6">
-          <nav className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/10 px-5 py-4 shadow-2xl shadow-violet-950/30 backdrop-blur">
+          <nav className="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/10 px-5 py-4 shadow-2xl shadow-violet-950/30 backdrop-blur">
             <a href="/dashboard" className="group flex items-center gap-3 text-lg font-bold tracking-wide text-white">
               <span className="relative grid h-9 w-9 place-items-center rounded-md bg-violet-500 shadow-lg shadow-violet-800/40 transition group-hover:rotate-6 group-hover:bg-fuchsia-500">
                 <span className="absolute top-2 h-2.5 w-2.5 rounded-full bg-white" />
@@ -62,7 +62,7 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
               <a className="rounded-md px-4 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white" href="/tasks">
                 Tasks
               </a>
-              <div className="relative flex flex-wrap items-center gap-3 rounded-lg border border-white/10 bg-white/10 px-3 py-2 shadow-lg shadow-violet-950/20 backdrop-blur">
+              <div className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/10 px-3 py-2 shadow-lg shadow-violet-950/20 backdrop-blur">
                 <button
                   type="button"
                   onClick={() => setIsProfileOpen((current) => !current)}
@@ -72,69 +72,61 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
                   {profileInitial}
                 </button>
 
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-white">
-                    {user?.name || "User"}
-                  </p>
-                  <p className="max-w-40 truncate text-xs text-violet-200">
-                    {user?.email || "user@example.com"}
-                  </p>
-                  <span className="mt-1 inline-flex rounded-md bg-violet-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-violet-100">
-                    {user?.role || "Role"}
-                  </span>
-                </div>
-
-                {isProfileOpen && (
-                  <div className="fixed right-8 top-28 z-[9999] w-72 rounded-lg border border-white/10 bg-[#171027]/95 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur">
-                    <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-4">
-                      <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-base font-black text-white">
-                        {profileInitial}
-                      </div>
-                      <div className="min-w-0">
-                        <p className="truncate font-semibold text-white">
-                          {user?.name || "User"}
-                        </p>
-                        <p className="truncate text-sm text-violet-200">
-                          {user?.email || "user@example.com"}
-                        </p>
-                        <span className="mt-2 inline-flex rounded-md bg-violet-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-violet-100">
-                          {user?.role || "Role"}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <a
-                        className="block rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
-                        href="/dashboard"
-                      >
-                        View Profile Summary
-                      </a>
-                      <a
-                        className="block rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
-                        href="/tasks"
-                      >
-                        My Assigned Tasks
-                      </a>
-                      <a
-                        className="block rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
-                        href="/projects"
-                      >
-                        Project Overview
-                      </a>
-                      <button
-                        type="button"
-                        onClick={logout}
-                        className="w-full rounded-md border border-rose-300/40 px-3 py-2 text-left text-sm font-semibold text-rose-100 transition hover:bg-rose-500 hover:text-white"
-                      >
-                        Logout
-                      </button>
-                    </div>
-                  </div>
-                )}
+                <span className="rounded-md bg-violet-500/20 px-2 py-1 text-xs font-bold uppercase tracking-wide text-violet-100">
+                  {user?.role || "Role"}
+                </span>
               </div>
             </div>
           </nav>
+
+          {isProfileOpen && (
+            <section className="mb-8 ml-auto w-full max-w-xl rounded-lg border border-white/10 bg-[#171027]/95 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur">
+              <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-4">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-base font-black text-white">
+                  {profileInitial}
+                </div>
+                <div className="min-w-0">
+                  <p className="truncate font-semibold text-white">
+                    {user?.name || "User"}
+                  </p>
+                  <p className="truncate text-sm text-violet-200">
+                    {user?.email || "user@example.com"}
+                  </p>
+                  <span className="mt-2 inline-flex rounded-md bg-violet-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-violet-100">
+                    {user?.role || "Role"}
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid gap-2 sm:grid-cols-2">
+                <a
+                  className="rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
+                  href="/dashboard"
+                >
+                  View Profile Summary
+                </a>
+                <a
+                  className="rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
+                  href="/tasks"
+                >
+                  My Assigned Tasks
+                </a>
+                <a
+                  className="rounded-md px-3 py-2 text-sm font-medium text-violet-100 transition hover:bg-white/10 hover:text-white"
+                  href="/projects"
+                >
+                  Project Overview
+                </a>
+                <button
+                  type="button"
+                  onClick={logout}
+                  className="rounded-md border border-rose-300/40 px-3 py-2 text-left text-sm font-semibold text-rose-100 transition hover:bg-rose-500 hover:text-white"
+                >
+                  Logout
+                </button>
+              </div>
+            </section>
+          )}
 
           <header className="mb-7">
             <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-violet-200">
