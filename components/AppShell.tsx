@@ -80,7 +80,7 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
           </nav>
 
           {isProfileOpen && (
-            <section className="mb-8 ml-auto w-full max-w-xl rounded-lg border border-white/10 bg-[#171027]/95 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur">
+            <section className="absolute right-5 top-28 z-50 w-[calc(100%-2.5rem)] max-w-xl rounded-lg border border-white/10 bg-[#171027]/80 p-4 text-left shadow-2xl shadow-violet-950/50 backdrop-blur-xl">
               <div className="mb-4 flex items-center gap-3 border-b border-white/10 pb-4">
                 <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-base font-black text-white">
                   {profileInitial}
